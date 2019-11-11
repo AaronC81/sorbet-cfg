@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    sorbet-cfg (0.1.0)
+      sorbet
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.5.0)
+    sorbet (0.4.4997)
+      sorbet-static (= 0.4.4997)
+    sorbet-static (0.4.4997-universal-darwin-14)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  rake (~> 10.0)
+  sorbet-cfg!
+
+BUNDLED WITH
+   2.0.2
