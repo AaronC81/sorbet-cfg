@@ -1,10 +1,9 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "sorbet/cfg/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "sorbet-cfg"
-  spec.version       = Sorbet::Cfg::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Aaron Christiansen"]
   spec.email         = ["aaronc20000@gmail.com"]
 
