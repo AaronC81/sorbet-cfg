@@ -1,3 +1,5 @@
+# typed: ignore
+
 RSpec.describe(SorbetCFG::RawParser) do
   let(:subject) { described_class.new }
 
