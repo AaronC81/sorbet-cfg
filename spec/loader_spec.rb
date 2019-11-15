@@ -29,4 +29,18 @@ RSpec.describe SorbetCFG::Loader do
       expect(described_class.project_root("#{LOADER_TEST_DIR}/src/some_folder/code.rb")).to eq nil
     end
   end
+
+  describe '#generate_cfg_export_rbi' do
+    it 'generates correct RBIs for accessible classes/modules' do
+      expect(described_class.generate_cfg_export_rbi(SorbetCFG::Tree::LocalVariable)).to eq <<-RUBY
+module SorbetCFG
+  module Tree
+    class LocalVariable
+      extend T::CFGExport
+    end
+  end
+end
+RUBY
+    end
+  end
 end
