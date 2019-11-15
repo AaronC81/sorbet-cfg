@@ -88,6 +88,12 @@ module SorbetCFG
       prop :return_type, T.nilable(Type)
       prop :arguments, T::Array[Argument]
       prop :blocks, T::Array[Block]
+
+      def self.from_hash(hash)
+        res = super(hash)
+        res.return_type = Type.from_hash(res.return_type)
+        res
+      end
     end
 
     class MultiCFG < T::Struct
