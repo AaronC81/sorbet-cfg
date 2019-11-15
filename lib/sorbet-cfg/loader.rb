@@ -26,7 +26,7 @@ module SorbetCFG
     def self.project_root(path)
       # TODO: Sorbet is currently Unix-only, so this code is too
 
-      raise 'path does not appear to be absolute' unless path.start_with?('/')
+      path = File.expand_path(path) unless path.start_with?('/')
 
       possible_paths = []
       Pathname.new(path).each_filename do |part|
