@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "sorbet-cfg"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.2"
   spec.authors       = ["Aaron Christiansen"]
   spec.email         = ["aaronc20000@gmail.com"]
 

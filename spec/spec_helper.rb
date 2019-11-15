@@ -1,6 +1,5 @@
 # typed: ignore
 
-require 'parslet/rig/rspec'
 require 'bundler/setup'
 require 'sorbet-cfg'
 
