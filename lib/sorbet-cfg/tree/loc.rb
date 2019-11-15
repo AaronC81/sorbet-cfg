@@ -5,8 +5,8 @@ module SorbetCFG
     class Loc < T::Struct      
       class Position < T::Struct
         class LC < T::Struct
-          prop :line, Integer
-          prop :column, Integer
+          prop :line, T.nilable(Integer)
+          prop :column, T.nilable(Integer)
         end
         
         prop :start, LC

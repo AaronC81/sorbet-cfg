@@ -19,8 +19,8 @@ module SorbetCFG
         prop :location, Loc
       end
 
-      prop :id, Integer
-      prop :bindings, T::Array[Binding]
+      prop :id, T.nilable(Integer)
+      prop :bindings, T::Array[Binding], factory: ->{ [] }
       prop :block_exit, BlockExit
     end
 
@@ -80,12 +80,12 @@ module SorbetCFG
     class CFG < T::Struct
       class Argument < T::Struct
         prop :name, String
-        prop :type, Type
+        prop :type, T.nilable(Type)
       end 
 
       prop :definition_full_name, String
       prop :location, Loc
-      prop :return_type, Type
+      prop :return_type, T.nilable(Type)
       prop :arguments, T::Array[Argument]
       prop :blocks, T::Array[Block]
     end
